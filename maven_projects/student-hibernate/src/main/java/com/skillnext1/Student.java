@@ -1,6 +1,10 @@
 package com.skillnext1;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "student")
@@ -11,49 +15,49 @@ public class Student {
     private int id;
 
     private String name;
-    private String email;
-    private int age;
+    private int sem;
+    private String dept;
 
     // Mandatory no-arg constructor
     public Student() {
     }
 
-    public Student(String name, String email, int age) {
+    public Student(String name, int sem, String dept) {
         this.name = name;
-        this.email = email;
-        this.age = age;
+        this.sem = sem;
+        this.dept = dept;
     }
 
-    // Getters and Setters
+    // Getters & Setters
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
+    public int getSem() {
+        return sem;
+    }
+
+    public String getDept() {
+        return dept;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public void setSem(int sem) {
+        this.sem = sem;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
+    public void setDept(String dept) {
+        this.dept = dept;
     }
 }

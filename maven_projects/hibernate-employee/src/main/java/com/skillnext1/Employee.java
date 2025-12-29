@@ -11,26 +11,48 @@ public class Employee {
     private int id;
 
     private String name;
-    private String email;
     private double salary;
+    private String dept;
 
-    public Employee() {}
+    public Employee() {
+    }
 
-    public Employee(String name, String email, double salary) {
+    public Employee(String name, double salary, String dept) {
         this.name = name;
-        this.email = email;
+        this.salary = salary;
+        this.dept = dept;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public String getDept() {
+        return dept;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
-    // getters & setters
-    public int getId() { return id; }
-
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
-
-    public double getSalary() { return salary; }
-    public void setSalary(double salary) { this.salary = salary; }
+    public void setDept(String dept) {
+        this.dept = dept;
+    }
 }
+
